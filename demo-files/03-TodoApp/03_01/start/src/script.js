@@ -55,6 +55,24 @@ let ToDoList = React.createClass({
         }
     },
     render: function() {
+        if (this.state.editing) {
+            return this.form()
+        } else {
+            return this.display()
+        }
+    },
+    edit: function(){
+        this.setState({editing:true});
+    },
+    remove: function() {
+        alert("remove")
+    },
+    save: function() {
+        var val = this.refs.newVal.getDOMNode().value;
+        this.setState({editing:false});
+        alert(val + " is saved");
+    },
+    display: function() {
         return (
             <div>
                 <h1>Things to do</h1>
