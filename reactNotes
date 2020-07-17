@@ -1,0 +1,27 @@
+React is just the UI. Focuses only on the View (MVC). 
+React interacts with a virtual dom. Increases performance. Selectively renders subtrees of nodes upon state changes
+React is simple and intuitive
+React can be rendered on both client and server side
+
+Why React?
+- Declarative 
+- Composable - Reusable Modules
+- Fast 
+
+JSX 
+- JSX is a syntax extension of javascript
+- XML syntax - like
+- Concise and Faster 
+
+React component
+React.createClass({})
+    - render function() in every component
+React.render  - where to render (body)
+    - Examples
+        React.render(what to render(Components, code, or html), where to render(document.body, getElementByID, etc))
+        React.render(<h1>Hello World</h1>, document.getElementByID("container")) - with JSX
+        React.render(React.createElement('h1', null, 'Hello World'), document.getElementByID("container")) - no JSX
+
+React properties (props) - props is to React as attributes are to html
+
+className - Apply css classes to React content with className (not class)
