@@ -15,7 +15,17 @@ JSX
 
 React component
 React.createClass({})
-    - render function() in every component
+    - render: function() in every component
+    - render:function () {
+        - should not modify component state. does not read or write from document. should return the same thing each time
+        - makes server rendering more practical
+    }
+    - getInitialState - this.state...
+    - getDefaultProps
+    - propTypes - validation of props
+    - mixins
+    - statics
+    - displayName
 React.render  - where to render (body)
     - Examples
         React.render(what to render(Components, code, or html), where to render(document.body, getElementByID, etc))
