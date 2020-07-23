@@ -35,3 +35,24 @@ React.render  - where to render (body)
 React properties (props) - props is to React as attributes are to html
 
 className - Apply css classes to React content with className (not class)
+
+States/Methods 
+Mount
+    - componentWillMount - only gets called ONCE when the component is loaded BEFORE render method
+    - componentDidMount - only gets called ONCE AFTER the render method
+Update
+    - componentWillReceiveProps - gets called everytime the component is updated, before the render function
+    - shouldComponentUpdate - if return is true, render function will be called
+    - componentWillUpdate - will get called if shouldComponentUpdate returns true, gets called before render function
+    - componentDidUpdate - gets called after render
+Unmount
+    - componentWillUnmount - 
+
+To call function from <script file> in html
+Example
+    - in html - <button onClick="renderComponent()">Render</button>
+    - in script file - window.renderComponent = function() {
+                            React.render(<Component/>, document.getElementByID('container'));
+                        }
+
+Props/properties
