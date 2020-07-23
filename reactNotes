@@ -39,15 +39,15 @@ className - Apply css classes to React content with className (not class)
 
 States/Methods 
 Mount
-    - componentWillMount - only gets called Once when the component is loaded with render method
-    - componentDidMount - only gets called after the render method
+    - componentWillMount - only gets called ONCE when the component is loaded BEFORE render method
+    - componentDidMount - only gets called ONCE AFTER the render method
 Update
-    - componentWillReceiveProps
-    - shouldComponentUpdate
-    - componentWillUpdate
-    - componentDidUpdate
+    - componentWillReceiveProps - gets called everytime the component is updated, before the render function
+    - shouldComponentUpdate - if return is true, render function will be called
+    - componentWillUpdate - will get called if shouldComponentUpdate returns true, gets called before render function
+    - componentDidUpdate - gets called after render
 Unmount
-    - componentWillUnmount
+    - componentWillUnmount - 
 
 To call function from <script file> in html
 Example
@@ -55,3 +55,5 @@ Example
     - in script file - window.renderComponent = function() {
                             React.render(<Component/>, document.getElementByID('container'));
                         }
+
+Props/properties
