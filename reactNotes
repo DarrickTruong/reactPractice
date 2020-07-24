@@ -36,6 +36,8 @@ React properties (props) - props is to React as attributes are to html
 
 className - Apply css classes to React content with className (not class)
 
+
+Learn React from Scratch Course
 States/Methods 
 Mount
     - componentWillMount - only gets called ONCE when the component is loaded BEFORE render method
@@ -70,6 +72,7 @@ React Events/SyntheticEvents
 - Form Events
     - onSubmit, onChange, onInput
 - Mouse Events
+
     - onClick, onDoubleClick, onDrag, etc
 - Touch Events
     - onTouchCancel, onTouchMove, onTouchEnd, onTouchStart
@@ -79,3 +82,14 @@ React Events/SyntheticEvents
 Static Methods
 - A way to access functionality before its rendered
 - Static methods do not have access to states or properties within components
+
+Accessing dom
+- getDOMNode
+- refs - a way to give a node an id
+
+Using Gulp to compile and concatonate jsx to js 
+- dependencies - npm install --save gulp gulp-concat gulp-react 
+-need global install npm install -g gulp-cli
+
+Using Gulp to compile and concatonate jsx to js using browserify
+- dependencies - npm install --save browserify reactify vinyl-source-stream watchify gulp-util
