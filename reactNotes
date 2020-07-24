@@ -56,3 +56,21 @@ Example
                         }
 
 Props/properties
+- State is internal to components. properties are external to components
+- properties define what the component does
+
+React Events/SyntheticEvents
+- Clipboard Events
+    - onCopy, onCut, onPaste
+- Keyboard Events
+    - onKeyDown, onKeyPress, onKeyUp
+- Focus Events
+    - onFocus, onBlut
+- Form Events
+    - onSubmit, onChange, onInput
+- Mouse Events
+    - onClick, onDoubleClick, onDrag, etc
+- Touch Events
+    - onTouchCancel, onTouchMove, onTouchEnd, onTouchStart
+- Wheel Events
+    - onWheel
