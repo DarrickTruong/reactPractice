@@ -56,6 +56,7 @@ Example
                         }
 
 Props/properties
+- Properties are to components what attributes are to html tags
 - State is internal to components. properties are external to components
 - properties define what the component does
 
@@ -74,3 +75,7 @@ React Events/SyntheticEvents
     - onTouchCancel, onTouchMove, onTouchEnd, onTouchStart
 - Wheel Events
     - onWheel
+
+Static Methods
+- A way to access functionality before its rendered
+- Static methods do not have access to states or properties within components
