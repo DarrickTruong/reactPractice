@@ -137,3 +137,31 @@ Communicate between components
         })
         var coursesElement={Courses list={courseList}} />;
         React.render(coursesElement, document.getElementByID('divContainer'))
+
+Dom Event Listeners in a Component
+- Special Non-DOM attributes
+    + key
+    + ref
+    + dangerously SetInnerHTML
+
+- Inline Style
+    + in React, inline style is set with an object {}
+    + styles attributes/object keys should be camelCased
+    + React automatically appends px 
+
+- dangerouslySetInnerHTML
+    + use __html
+    + React does not allow you to set raw html element within a html element of a component unless you use dangerouslySetInnerHTML
+
+React Add-ons
+- Clone Elements
+    + React.cloneElement
+
+- Class Set
+    + use classSet to apply conditional styles
+
+- Class Names
+    + use classNames to apply conditional styles
+
+- CSSTransitionGroup
+    + use to make animations
