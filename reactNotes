@@ -93,3 +93,47 @@ Using Gulp to compile and concatonate jsx to js
 
 Using Gulp to compile and concatonate jsx to js using browserify
 - dependencies - npm install --save browserify reactify vinyl-source-stream watchify gulp-util
+
+
+Communicate between components
+- Parent-Child Communication
+    + Use props
+        - Example
+        var CourseCollection = React.class({
+            render: function() {
+                return (
+                    <Courses platform={this.props.platform} />      // this.props.parent is from parent
+                );
+            }
+        });
+
+        var courseElement = <CourseCollection platform={"udemy"} />;      // Parent passing information to Child
+        React.render(courseElement, document.getElementByID('divContainer'));
+- Child-Parent Communication
+    + Use bind Events
+        - Example
+        var courseList = [
+            {courseName: "Master ReactJS"},
+            {courseName: "Master AngularJS"},
+            {courseName: "Master JavaScript and jQuery"},
+            {courseName: "Master KnockoutJS"}
+        ]
+        var Courses = React.createClass({
+            onSelect: function(i) {
+                console.log('You clicked ' + this.props.list[i].courseName);
+            },
+            render: function () {
+                return (
+                    <div>
+                        We have the following courses to offer 
+                        {this.props.list.map(function(course, i){
+                            return (
+                                <div onClick={this.onSelect.bind(this,i)} key=i> {course} </div> 
+                            );
+                        }, this)}
+                    </div>
+                );
+            }
+        })
+        var coursesElement={Courses list={courseList}} />;
+        React.render(coursesElement, document.getElementByID('divContainer'))
